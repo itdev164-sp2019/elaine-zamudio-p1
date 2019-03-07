@@ -40,12 +40,43 @@ const theme = {
 
 
 const defaults = {
-//todo add default components styles
+    button: {
+        padding: `${theme.space[2] / 16}em ${(theme.space[3] + 4) /16}em`,
+        border: theme.borders[3],
+    textTransform: 'uppercase',
+letterSpacing: theme.letterSpacings.tracked    }
 }
 
 const variants = {
 
-//todo add variant components styles
+    button: {
+        primary: {
+            ...defaults.button,
+            color: theme.colors.primary.main,
+            borderColor: theme.colors.primary.main
+        },
+        contrast: {
+            ...defaults.button,
+            color: theme.colors.primary.contrastText,
+            borderColor: theme.colors.primary.contrastText
+        }
+    },
+    iconButton: {
+        primary: {
+            color: theme.colors.primary.main
+        },
+        contrast: {
+            color: theme.colors.primary.contrastText
+        }
+    },
+    linkButton: {
+        primary: {
+            color: theme.colors.primary.main
+        },
+        contrast: {
+            color: theme.colors.primary.contrastText
+        }
+    }
 }
 
 const Gray = { ...theme, defaults, variants }

@@ -5,6 +5,7 @@ import Header from "./header"
 import "./layout.css"
 import { ThemeProvider } from 'styled-comopnents'
 import { Red as theme } from '../themes/Red'
+import { Footer, Main } from '../components/Element'
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -29,12 +30,12 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
-          <footer>
+          <Main>{children}</Main>
+          <Footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </Footer>
         </div>
       </>
     )}
